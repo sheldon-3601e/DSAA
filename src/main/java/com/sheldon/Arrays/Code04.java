@@ -1,4 +1,4 @@
-package com.sheldon.Arraysa;
+package com.sheldon.Arrays;
 
 /**
  * @ClassName code04
