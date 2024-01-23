@@ -5,7 +5,7 @@ package com.sheldon.Strings;
  * @Author 26483
  * @Date 2024/1/20 16:52
  * @Version 1.0
- * @Description TODO
+ * @Description KMP算法
  */
 public class KMP {
 
