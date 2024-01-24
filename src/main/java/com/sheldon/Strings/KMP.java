@@ -10,18 +10,18 @@ package com.sheldon.Strings;
 public class KMP {
 
     // 构建部分匹配表
-    public static int[] buildPartialMatchTable(String pattern) {
-        int[] table = new int[pattern.length()];
+    public static int[] buildPartialMatchTable(String text) {
+        int[] table = new int[text.length()];
         int j = 0;
 
-        for (int i = 1; i < pattern.length(); i++) {
+        for (int i = 1; i < text.length(); i++) {
             // 当模式串中的字符不匹配时，回溯到之前已匹配部分的位置
-            while (j > 0 && pattern.charAt(i) != pattern.charAt(j)) {
+            while (j > 0 && text.charAt(i) != text.charAt(j)) {
                 j = table[j - 1];
             }
 
             // 如果模式串中的字符匹配，增加已匹配部分的长度
-            if (pattern.charAt(i) == pattern.charAt(j)) {
+            if (text.charAt(i) == text.charAt(j)) {
                 j++;
             }
 
@@ -35,7 +35,7 @@ public class KMP {
 
     // KMP算法的搜索过程
     public static int kmpSearch(String text, String pattern) {
-        int[] table = buildPartialMatchTable(pattern);
+        int[] table = buildPartialMatchTable(text);
         int j = 0;
 
         for (int i = 0; i < text.length(); i++) {
@@ -59,8 +59,8 @@ public class KMP {
     }
 
     public static void main(String[] args) {
-        String text = "ABABCABABCABCABC";
-        String pattern = "ABABC";
+        String text = "SDSDDAFDFDSASSD";
+        String pattern = "DA";
 
         // 使用KMP算法进行搜索
         int result = kmpSearch(text, pattern);
