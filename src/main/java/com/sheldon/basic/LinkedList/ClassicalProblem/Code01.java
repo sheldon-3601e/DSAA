@@ -8,33 +8,34 @@ import com.sheldon.basic.LinkedList.Utils;
  * @Author 26483
  * @Date 2024/1/29 10:55
  * @Version 1.0
- * @TODO  递归
+ * @TODO 递归
  */
 public class Code01 {
-    /**
-     * 递归的模板
-     * <p>
-     * public ListNode reverseList(参数0) {
-     *     if (终止条件)
-     *         return;
-     * <p>
-     *     逻辑处理（可能有，也可能没有，具体问题具体分析）
-     * <p>
-     *     //递归调用
-     *     ListNode reverse = reverseList(参数1);
-     * <p>
-     *     逻辑处理（可能有，也可能没有，具体问题具体分析）
-     * }
+    /*
+      递归的模板
+      <p>
+      public ListNode reverseList(参数0) {
+          if (终止条件)
+              return;
+      <p>
+          逻辑处理（可能有，也可能没有，具体问题具体分析）
+      <p>
+          //递归调用
+          ListNode reverse = reverseList(参数1);
+      <p>
+          逻辑处理（可能有，也可能没有，具体问题具体分析）
+      }
      */
 
     /**
-     *  * <p>
-     *  * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
-     *  * <p>
-     *  * 示例 1：
-     *  * <p>
-     *  * 输入：head = [1,2,3,4,5]
-     *  * 输出：[5,4,3,2,1]
+     * * <p>
+     * * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
+     * * <p>
+     * * 示例 1：
+     * * <p>
+     * * 输入：head = [1,2,3,4,5]
+     * * 输出：[5,4,3,2,1]
+     *
      * @param head
      * @return
      */
@@ -43,8 +44,9 @@ public class Code01 {
     }
 
     private ListNode reverseListInt(ListNode head, ListNode newHead) {
-        if (head == null)
+        if (head == null) {
             return newHead;
+        }
         ListNode next = head.next;
         head.next = newHead;
         ListNode node = reverseListInt(next, head);
@@ -71,26 +73,24 @@ public class Code01 {
     }
 
     public static ListNode reverseList01(ListNode head) {
-        ListNode result;
         // 如果链表为空或者只有一个节点，直接返回head
         if (head == null || head.next == null) {
-            result = head;
-        } else {
-            ListNode prev = null;
-            ListNode cur = head;// 遍历链表，反转每一个节点
-            while (cur != null) {
-                // 保存当前节点的下一个节点
-                ListNode nextNode = cur.next;
-                // 将当前节点的next指针指向前一个节点
-                cur.next = prev;
-                // 更新prev为当前节点
-                prev = cur;
-                // 更新当前节点为原链表中的下一个节点
-                cur = nextNode;
-            }// 最终prev指向反转后链表的头节点
-            result = prev;
+            return head;
         }
-
+        ListNode result = null;
+        ListNode prev = null;
+        ListNode cur = head;// 遍历链表，反转每一个节点
+        while (cur != null) {
+            // 保存当前节点的下一个节点
+            ListNode nextNode = cur.next;
+            // 将当前节点的next指针指向前一个节点
+            cur.next = prev;
+            // 更新prev为当前节点
+            prev = cur;
+            // 更新当前节点为原链表中的下一个节点
+            cur = nextNode;
+        }// 最终prev指向反转后链表的头节点
+        result = prev;
         return result;
     }
 

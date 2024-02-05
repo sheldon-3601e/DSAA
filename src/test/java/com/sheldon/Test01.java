@@ -1,5 +1,6 @@
 package com.sheldon;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -13,5 +14,8 @@ public class Test01 {
     public static void main(String[] args) {
         String s1 = "HelloWorld";
         System.out.println(s1.toCharArray()[0]);
+
+        ArrayList<Object> objects = new ArrayList<>();
+        objects
     }
 }
