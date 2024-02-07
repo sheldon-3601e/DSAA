@@ -14,7 +14,8 @@ public class Hello {
     public static void main(String[] args) {
         LinkedList<Object> objects = new LinkedList<>();
         objects.poll();
-
+        String s = "hello word";
+        char[] charArray = s.toCharArray();
 
     }
 }
