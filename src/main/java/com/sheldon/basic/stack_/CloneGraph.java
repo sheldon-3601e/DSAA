@@ -38,6 +38,26 @@ import java.util.List;
  */
 public class CloneGraph {
 
+    class Node {
+        public int val;
+        public List<Node> neighbors;
+
+        public Node() {
+            val = 0;
+            neighbors = new ArrayList<Node>();
+        }
+
+        public Node(int _val) {
+            val = _val;
+            neighbors = new ArrayList<Node>();
+        }
+
+        public Node(int _val, ArrayList<Node> _neighbors) {
+            val = _val;
+            neighbors = _neighbors;
+        }
+    }
+
     public Node cloneGraph01(Node node) {
         return dfs(node, new HashMap<>());
     }
@@ -63,40 +83,25 @@ public class CloneGraph {
     }
 
     public static void main(String[] args) {
-        Node node = new Node(1);
-        Node node2 = new Node(2);
-        Node node3 = new Node(3);
-        Node node4 = new Node(4);
-        node.neighbors.add(node2);
-        node.neighbors.add(node4);
-        node2.neighbors.add(node);
-        node2.neighbors.add(node3);
-        node3.neighbors.add(node2);
-        node3.neighbors.add(node4);
-        node4.neighbors.add(node);
-        node4.neighbors.add(node3);
         CloneGraph cloneGraph = new CloneGraph();
-        Node node1 = cloneGraph.cloneGraph01(node);
-        System.out.println(node1);
+        Node node = cloneGraph.new Node(1);
+        Node node1 = cloneGraph.new Node(2);
+        Node node2 = cloneGraph.new Node(3);
+        Node node3 = cloneGraph.new Node(4);
+        node.neighbors = new ArrayList<>();
+        node.neighbors.add(node1);
+        node.neighbors.add(node3);
+        node1.neighbors = new ArrayList<>();
+        node1.neighbors.add(node);
+        node1.neighbors.add(node2);
+        node2.neighbors = new ArrayList<>();
+        node2.neighbors.add(node1);
+        node2.neighbors.add(node3);
+        node3.neighbors = new ArrayList<>();
+        node3.neighbors.add(node);
+        node3.neighbors.add(node2);
+        Node node4 = cloneGraph.cloneGraph01(node);
+        System.out.println(node4);
     }
 }
 
-class Node {
-    public int val;
-    public List<Node> neighbors;
-
-    public Node() {
-        val = 0;
-        neighbors = new ArrayList<Node>();
-    }
-
-    public Node(int _val) {
-        val = _val;
-        neighbors = new ArrayList<Node>();
-    }
-
-    public Node(int _val, ArrayList<Node> _neighbors) {
-        val = _val;
-        neighbors = _neighbors;
-    }
-}
