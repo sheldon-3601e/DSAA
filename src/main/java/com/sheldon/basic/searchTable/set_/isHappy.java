@@ -1,8 +1,6 @@
-package com.sheldon.basic.set_;
+package com.sheldon.basic.searchTable.set_;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**

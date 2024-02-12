@@ -1,4 +1,4 @@
-package com.sheldon.basic.set_;
+package com.sheldon.basic.searchTable.set_;
 
 import java.util.HashSet;
 import java.util.Set;

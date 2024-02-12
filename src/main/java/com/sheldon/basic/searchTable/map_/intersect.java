@@ -1,4 +1,4 @@
-package com.sheldon.basic.map_;
+package com.sheldon.basic.searchTable.map_;
 
 import java.util.ArrayList;
 import java.util.HashMap;
