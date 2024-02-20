@@ -26,9 +26,12 @@ import java.util.Arrays;
  * ]
  *
  */
-public class Code05 {
+public class setZeroes {
 
-    public static void setZeroes(int[][] matrix) {
+    public static void setZeroes03(int[][] matrix) {
+
+    }
+    public static void setZeroes01(int[][] matrix) {
         ArrayList<Integer> x = new ArrayList<>();
         ArrayList<Integer> y = new ArrayList<>();
         for (int i = 0; i < matrix.length; i++) {
