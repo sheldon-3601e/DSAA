@@ -8,7 +8,7 @@ import java.util.Map;
  * 给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字符的最小子串。
  * 链接：https://leetcode-cn.com/problems/minimum-window-substring/
  */
-class minWindow_ {
+class minWindow_12 {
     public String minWindow(String s, String t) {
         if (s == null || s.length() == 0 || t == null || t.length() == 0) {
             return "";
@@ -70,7 +70,7 @@ class minWindow_ {
     }
 
     public static void main(String[] args) {
-        minWindow_ minWindow = new minWindow_();
+        minWindow_12 minWindow = new minWindow_12();
         String s = "ADOBECODEBANC";
         String t = "ABC";
         System.out.println(minWindow.minWindow(s, t));

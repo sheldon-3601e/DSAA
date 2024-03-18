@@ -8,7 +8,7 @@ import java.util.Deque;
  * 给你一个整数数组 nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。
  * 链接：https://leetcode-cn.com/problems/sliding-window-maximum/
  */
-public class maxSlidingWindow_ {
+public class maxSlidingWindow_11 {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         // 结果数组
@@ -38,7 +38,7 @@ public class maxSlidingWindow_ {
     }
 
     public static void main(String[] args) {
-        maxSlidingWindow_ maxSlidingWindow = new maxSlidingWindow_();
+        maxSlidingWindow_11 maxSlidingWindow = new maxSlidingWindow_11();
         int[] nums = {1,3,-1,-3,5,3,6,7};
         int k = 3;
         int[] result = maxSlidingWindow.maxSlidingWindow(nums, k);

@@ -8,7 +8,7 @@ import java.util.Map;
  * 给定一个整数数组和一个整数k，你需要找到该数组中和为k的连续的子数组的个数。
  * 链接：https://leetcode-cn.com/problems/subarray-sum-equals-k/
  */
-class subarraySum_ {
+class subarraySum_10 {
     public int subarraySum(int[] nums, int k) {
         int result = 0;
         // 前缀和和出现次数的映射
@@ -28,7 +28,7 @@ class subarraySum_ {
     }
 
     public static void main(String[] args) {
-        subarraySum_ subarraySum = new subarraySum_();
+        subarraySum_10 subarraySum = new subarraySum_10();
         int[] nums = {1, 1, 1};
         int k = 2;
         System.out.println(subarraySum.subarraySum(nums, k));
