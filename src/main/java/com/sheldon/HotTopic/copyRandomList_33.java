@@ -3,19 +3,20 @@ package com.sheldon.HotTopic;
 import java.util.HashMap;
 import java.util.Map;
 
-class Node {
-    int val;
-    Node next;
-    Node random;
-
-    public Node(int val) {
-        this.val = val;
-        this.next = null;
-        this.random = null;
-    }
-}
-
 class copyRandomList_33 {
+
+    class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
+    }
+
     public Node copyRandomList(Node head) {
         // 创建一个哈希表，key是原节点，value是新节点
         Map<Node, Node> map = new HashMap<>();

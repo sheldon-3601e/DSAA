@@ -8,7 +8,7 @@ package com.sheldon.HotTopic;
  * https://leetcode-cn.com/problems/diameter-of-binary-tree/
  */
 
-class maxPathLength_41 {
+class diameterOfBinaryTree_41 {
 
     private int maxPathLength = 0;
     public int diameterOfBinaryTree(TreeNode root) {
