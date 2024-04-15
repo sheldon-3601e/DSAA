@@ -3,7 +3,7 @@ package com.sheldon.HotTopic;
 import java.util.*;
 
 /**
- * Created by sheldon on 18-7-25.
+ * Created by sheldon.
  * 207. 课程表
  * 现在你总共有 n 门课需要选，记为 0 到 n-1。
  * 在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们: [0,1]
@@ -11,7 +11,7 @@ import java.util.*;
  * https://leetcode.cn/problems/course-schedule
  */
 
-class Solution {
+class canFinish_54 {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
         // 定义入度表
@@ -62,9 +62,9 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        canFinish_54 canFinish54 = new canFinish_54();
         int numCourses = 2;
         int[][] prerequisites = {{1, 0}, {0, 1}};
-        System.out.println(solution.canFinish(numCourses, prerequisites));
+        System.out.println(canFinish54.canFinish(numCourses, prerequisites));
     }
 }
